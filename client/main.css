@@ -15,12 +15,34 @@ body,html {
     min-height: 8rem;
 }
 
-.header-content {
-    vertical-align: bottom;
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: #000;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 }
 
 .thumbnail {
-    flex-shrink: 2;
     width: 30rem;
     height: 20rem;
     margin: auto;
@@ -29,7 +51,7 @@ body,html {
 }
 
 .thumbnail:hover {
-    transform: scale(3) translateY(calc(10vh)) translateX(calc(20vh - 250px));
+    transform: scale(3) translateY(calc(10vh)) translateX(calc(20vh));
 }
 
 .thumbnails {
