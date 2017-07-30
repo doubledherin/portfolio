@@ -60,15 +60,15 @@ body,html {
     justify-content: space-evenly;
 }
 .drumkit {
-    background: url("assets/thumbnails/drumkit_thumbnail.png");
+    background: url('assets/thumbnails/drumkit_thumbnail.png');
     background-size: cover;
 }
 .clock {
-    background: url("assets/thumbnails/clock_thumbnail.png");
+    background: url('assets/thumbnails/clock_thumbnail.png');
     background-size: cover;
 }
 .css-variables {
-    background: url("assets/thumbnails/css_variables_thumbnail.png");
+    background: url('assets/thumbnails/css_variables_thumbnail.png');
     background-size: cover;
 }
 .keys {

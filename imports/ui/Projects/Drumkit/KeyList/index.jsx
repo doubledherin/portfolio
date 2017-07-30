@@ -1,5 +1,5 @@
-import React from "react"
-import Key from "../Key/index.jsx"
+import React from 'react'
+import Key from '../Key/index.jsx'
 
 export default KeyList = React.createClass({
 

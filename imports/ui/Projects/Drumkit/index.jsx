@@ -1,24 +1,24 @@
-import React from "react"
-import KeyList from "./KeyList/index.jsx"
-import ReactCSSTransitionGroup from "react-addons-css-transition-group"
+import React from 'react';
+import KeyList from './KeyList/index.jsx';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 export default Drumkit = React.createClass({
 
     componentDidMount() {
-        window.addEventListener("keydown", this.playSound)
+        window.addEventListener('keydown', this.playSound);
     },
 
     componentWillUnmount() {
-        window.removeEventListener("keydown", this.playSound)
+        window.removeEventListener('keydown', this.playSound);
     },
 
     playSound(e) {
-        // retrieve from the DOM  an <audio/> element with a data-key that matches e"s
+        // retrieve from the DOM  an <audio/> element with a data-key that matches e's
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
 
         // case: no such audio element (audio === null)
         if (!audio) return
-        // retrieve from the DOM an element with 1) a class "key" and 2) a data-key that matches e"s
+        // retrieve from the DOM an element with 1) a class 'key' and 2) a data-key that matches e's
         const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
 
         // <audio/> is an HTML5 HMTLMediaElement,
@@ -31,17 +31,17 @@ export default Drumkit = React.createClass({
 
         audio.play()
 
-        // only add "playing" class if the key that was pressed is in the DOM
+        // only add 'playing' class if the key that was pressed is in the DOM
         if (key) {
             // vanilla JS way of adding a class
-            key.classList.add("playing")
+            key.classList.add('playing')
         }
     },
 
     removeTransition(e) {
         console.log("e: ", e)
-        if (e.propertyName !== "transform") return
-        this.classList.remove("playing")
+        if (e.propertyName !== 'transform') return
+        this.classList.remove('playing')
     },
 
     renderKeys() {

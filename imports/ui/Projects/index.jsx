@@ -1,5 +1,5 @@
-import React from "react"
-import Drumkit from "./Drumkit/index.jsx"
+import React from 'react'
+import Drumkit from './Drumkit/index.jsx'
 
 export default Projects = React.createClass({
     render() {
