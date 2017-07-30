@@ -1,7 +1,5 @@
 html {
     font-size: 10px;
-    background: url(http://i.imgur.com/w1pEtEgh.jpg) bottom center;
-    background-size: cover;
 }
 
 body,html {
@@ -10,6 +8,21 @@ body,html {
     font-family: sans-serif;
 }
 
+.header {
+    z-index: 1;
+    background-color: white;
+    min-height: 8rem;
+}
+
+.header-content {
+    vertical-align: bottom;
+}
+
+.project {
+    background: url(http://i.imgur.com/w1pEtEgh.jpg) bottom center;
+    background-size: cover;
+    width: 50%;
+}
 .keys {
     display: flex;
     flex: 1;

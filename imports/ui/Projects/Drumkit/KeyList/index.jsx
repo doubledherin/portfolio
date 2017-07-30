@@ -1,7 +1,11 @@
 import React from 'react'
+import Key from '../Key/index.jsx'
 
 export default KeyList = React.createClass({
+
     render() {
+
+
         return (
             <div className="keys">
                 <div data-key="65" className="key">

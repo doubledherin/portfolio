@@ -4,7 +4,9 @@ import React from 'react';
 export default Project = React.createClass({
   render() {
     return (
-        <div>This is a project</div>
+        <Project className="project">
+            { this.props.children }
+        </Project>
     );
   }
 })

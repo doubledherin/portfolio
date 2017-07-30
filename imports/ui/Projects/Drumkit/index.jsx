@@ -1,5 +1,6 @@
 import React from 'react';
 import KeyList from './KeyList/index.jsx';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 export default Drumkit = React.createClass({
 
@@ -12,17 +13,11 @@ export default Drumkit = React.createClass({
     },
 
     playSound(e) {
-        console.log("in playSound")
-        const audio = document.querySelector(`audio[data-key]="${e.keyCode}"`)
-    },
-
-    playSound(e) {
         // retrieve from the DOM  an <audio/> element with a data-key that matches e's
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
 
         // case: no such audio element (audio === null)
         if (!audio) return
-        console.log(audio)
         // retrieve from the DOM an element with 1) a class 'key' and 2) a data-key that matches e's
         const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
 
@@ -54,13 +49,8 @@ export default Drumkit = React.createClass({
     },
 
     render() {
-        const keys = document.querySelectorAll('.key')
-        keys.forEach(key => {
-            key.addEventListener('transitionend', this.removeTransition)
-        })
-
         return (
-            <div>
+            <div className="project">
                 <KeyList />
 
                 <audio data-key="65" src="sounds/clap.wav"></audio>
