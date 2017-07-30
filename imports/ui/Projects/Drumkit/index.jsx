@@ -50,7 +50,7 @@ export default Drumkit = React.createClass({
 
     render() {
         return (
-            <div className="project">
+            <div className="project drumkit">
                 <KeyList />
 
                 <audio data-key="65" src="sounds/clap.wav"></audio>

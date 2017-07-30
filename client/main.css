@@ -1,5 +1,6 @@
 html {
     font-size: 10px;
+    background-color: black;
 }
 
 body,html {
@@ -18,10 +19,33 @@ body,html {
     vertical-align: bottom;
 }
 
-.project {
-    background: url(http://i.imgur.com/w1pEtEgh.jpg) bottom center;
+.thumbnail {
+    flex-shrink: 2;
+    width: 30rem;
+    height: 20rem;
+    margin: auto;
+    margin-top: 20px;
+    transition: all 2s ease-in-out;
+}
+
+.thumbnail:hover { transform: scale(3.1); }
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.drumkit {
+    background: url('assets/thumbnails/drumkit_thumbnail.png');
     background-size: cover;
-    width: 50%;
+}
+.clock {
+    background: url('assets/thumbnails/clock_thumbnail.png');
+    background-size: cover;
+}
+.css-variables {
+    background: url('assets/thumbnails/css_variables_thumbnail.png');
+    background-size: cover;
 }
 .keys {
     display: flex;

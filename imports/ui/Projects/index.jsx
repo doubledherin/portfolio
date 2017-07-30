@@ -6,6 +6,11 @@ export default Projects = React.createClass({
         return (
             <div className="projects">
                 <Drumkit />
+                <div className="project">Project!</div>
+                <div className="project">Project!</div>
+                <div className="project">Project!</div>
+                <div className="project">Project!</div>
+                <div className="project">Project!</div>
             </div>
         )
     }
