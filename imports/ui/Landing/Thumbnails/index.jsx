@@ -7,8 +7,8 @@ export default Thumbnails = React.createClass({
                 <div className="thumbnail drumkit"></div>
                 <div className="thumbnail clock"></div>
                 <div className="thumbnail css-variables"></div>
-                <div className="thumbnail drumkit"></div>
-                <div className="thumbnail drumkit"></div>
+                <div className="thumbnail flex-displays"></div>
+                <div className="thumbnail draw-pad"></div>
             </div>
         )
     }
